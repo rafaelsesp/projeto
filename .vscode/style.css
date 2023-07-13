@@ -1,0 +1,163 @@
+/*ligth*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/*faz com que a caixa tenha suas medidas a partir da borda*/
+}
+:root{
+    --text-color: white;
+    --bg-url: url(../assets/bg-mobile.jpg);
+    --stroke-color: rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --highlight-color: rgba(255, 255, 255, 0.2);
+    --switch-bg-url: url(../assets/moon-stars.svg);
+}
+.light{
+    --text-color: black;
+    --bg-url: url(../assets/bg-mobile-light.jpg);
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --surface-color: rgba(0, 0, 0, 0.05); 
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --highlight-color: rgba(0, 0, 0, 0.1);
+    --switch-bg-url: url(../assets/sun.svg);
+}
+/*ligth*/
+body {
+    /*
+    background-image: url(../assets/bg-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+     bacckground: color image repeat position/size */
+    background: var(--bg-url) no-repeat top center/cover;
+}
+body *{
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+}
+#conteiner{
+    width: 360px; /*Largura da caixa*/
+    /* height: 712px;  Altura da caixa*/
+    /*border: 2px solid yellow;*/ /*Define uma borda para imagem 
+    (essa propriedade foi colocada para que a caixa fique visível)
+        - Definimos a expessura da linha da caixa em 2 px;
+        - Definmos o tipo de linha como solid
+        - Finalizamos escolha=endo a cor yellow*/
+    margin: auto;/*Definimos a distribuição da caixa com o espaço do site como, 
+    colocando com o valor auto a caixa ficará bem distribuída para todos os lados*/
+    /*margin-top: 56px; para mexer somente no topo da margem*/
+    margin: 56px auto 0px;
+    padding: 0px 24px;
+}
+
+
+/* Profile */
+#profile {
+    text-align: center;
+    padding: 24px;
+}
+
+#profile img{
+    width: 112px;
+    margin: auto;
+}
+
+#profile p{
+    font-weight: 500;
+    font: size 16px;
+    line-height: 24px;
+    margin-top: 8px;
+}
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    padding: 24px 0px;
+}
+/*border: 1px solid yellow;*/
+
+
+/* Switch */
+#switch{
+    position: relative;
+    width: 64px;
+    margin: 4px  auto;
+}
+
+#switch button{
+    width: 32px;
+    height: 32px;
+    background: white var(--switch-bg-url) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+
+    position:absolute;
+    top:50%;
+    left: 0;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+#switch span{
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    border-radius: 9999px;
+}
+
+.light #switch button{
+    right: 0;
+    left: initial;
+}
+
+
+/* Links */
+ul li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
+    backdrop-filter: blur(4px);/* Coloque -webkit-backdrop-filter para ter compartibilidade com alguns navegadores */
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s;
+
+    /*backdrop-filter: blur(4px);Coloca um blur no elemento*/
+}
+
+ul li a:hover/*pseudo selector para quando o mouse passar por cima*/{
+    background-color: var(--surface-color-hover);
+    border: 1.5px solid var(--text-color);
+}
+
+#social-links{
+    display:flex;
+    justify-content: center;
+    padding:24px 0px;
+    font-size: 24px;
+}
+#social-links a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    transition: background 0.2s;
+    border-radius: 50%;
+}
+
+#social-links a:hover{
+    background: var(--highlight-color);
+}
+footer{
+    padding: 24px 0px;
+    text-align: center;
+    font-size: 14px;
+}
