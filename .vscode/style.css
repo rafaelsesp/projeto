@@ -38,7 +38,7 @@ body *{
 }
 #conteiner{
     width: 100%; /*Largura da caixa*/
-    max-width: 588px; /*Largura máxima*/
+    max-width: 588px; /*Largura máxima do conteiner*/
 
     /* height: 712px;  Altura da caixa*/
     /*border: 2px solid yellow;*/ /*Define uma borda para imagem 
@@ -46,7 +46,7 @@ body *{
         - Definimos a expessura da linha da caixa em 2 px;
         - Definmos o tipo de linha como solid
         - Finalizamos escolha=endo a cor yellow*/
-        
+
     margin: auto;/*Definimos a distribuição da caixa com o espaço do site como, 
     colocando com o valor auto a caixa ficará bem distribuída para todos os lados*/
     /*margin-top: 56px; para mexer somente no topo da margem*/
