@@ -1,4 +1,4 @@
-/*ligth*/
+/*light*/
 *{
     margin: 0;
     padding: 0;
@@ -22,7 +22,7 @@
     --highlight-color: rgba(0, 0, 0, 0.1);
     --switch-bg-url: url(../assets/sun.svg);
 }
-/*ligth*/
+/*light*/
 body {
     /*
     background-image: url(../assets/bg-mobile.jpg);
@@ -103,6 +103,8 @@ ul {
     left: 0;
     z-index: 1;
     transform: translateY(-50%);
+
+    animation: slide-back 0.2s;
 }
 #switch span{
     display: block;
@@ -115,8 +117,11 @@ ul {
 }
 
 .light #switch button{
-    right: 0;
-    left: initial;
+    animation: slide-in 0.4s forwards;
+}
+
+#switch button:hover{
+    outline: 8px solid var(--highlight-color);
 }
 
 
@@ -174,5 +179,26 @@ footer{
 
     .light {
         --bg-url: url(../assets/bg-desktop-light.jpg);
+    }
+}
+
+/*animation*/
+
+/*O @keyframes determina uma animação*/
+@keyframes slide-in{
+    from{
+        left: 0;
+    }
+    to{
+        left: 50%;
+    }
+}
+
+@keyframes islide-back {
+    from{
+        left: 50%;
+    }
+    to{
+        left: 0;
     }
 }
